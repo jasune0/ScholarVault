@@ -56,7 +56,7 @@ export default function Saved() {
                                     onClick={() => navigate(`/paper/${encodeURIComponent(paper.doi)}`)}
                                 >
                                     <div className="saved-card-tags">
-                                        {paper.type === 'journal-articles' && <span className="tag tag-peer">Peer-Reviewed</span>}
+                                        {paper.type === 'journal-article' && <span className="tag tag-peer">Peer-Reviewed</span>}
                                         {paper.openAccess && <span className="tag tag-open">Open Access</span>}
                                     </div>
 

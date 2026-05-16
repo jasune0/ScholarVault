@@ -149,19 +149,6 @@
     color: var(--muted);
     font-style: italic;
 }
-
-/* References */
-
-.references-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-
-
-
-
 /* Sidebar */
 
 .detail-sidebar {
