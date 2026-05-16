@@ -1,0 +1,243 @@
+.home {
+    min-height: 100vh;
+}
+
+/* Hero section */ 
+
+.hero {
+    text-align: center;
+    padding: 72px 20px 48px;
+    background: var(--ink);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    line-height: 1.05;
+    color: var(--paper);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.hero-title em {
+    font-style: italic;
+    color: var(--accent);
+}
+
+.hero-sub {
+    font-size: 16px;
+    color: #9a9088;
+    line-height: 1.7;
+    position: relative;
+    margin-bottom: 2px;
+}
+
+/* Search */
+
+.search-section {
+    padding: 32px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.search-section.compact {
+    padding: 24px 40px 16px;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    background: white;
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+    overflow: hidden;   
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    font-size: 15px;
+    background: transparent;
+    color: var(--ink);
+}
+
+.search-input::placeholder {
+    color: #bbb;
+}
+
+.search-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+}
+
+.search-btn:hover {
+    opacity: 0.85;
+}
+
+/* Filters */
+
+.filters-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-row-inline {
+    justify-content: space-between;
+}
+
+.filter-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    white-space: nowrap;
+    min-width: 36px;
+}
+
+.chip {
+    background: var(--tag-bg);
+    border: 1px solid var(--border);
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--muted);
+    transition: all 0.15s;
+    margin-right: 12px;
+}
+
+.chip:hover {
+    border-color: #aaa;
+    color: var(--ink);
+}
+
+.chip.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.oa-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.oa-toggle input {
+    cursor: pointer;
+}
+
+/* Results */
+
+.results-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px 60px;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.results-count { 
+    font-size: 13px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+}
+
+
+.results-count strong {
+    color: var(--ink);
+}
+
+.error-box {
+    background: #fde8e1;
+    border: 1px solid #f5c6b5;
+
+}
+
+
+.no-results {
+    text-align: center;
+    color: var(--muted);
+    padding: 60px 20px;
+    font-size: 15px;
+}
+
+/* Suggestions */
+
+.suggestions {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.suggestions-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+.suggestion-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.suggestion-chip {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 13px;
+    color: var(--ink);
+    transition: all 0.15s;
+}
+
+.suggestion-chip:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
