@@ -43,21 +43,7 @@ input, textarea, select {
   font-family: 'Outfit', sans-serif;
 }
  
-/* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--cream); }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
- 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
- 
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
- 
+  
 .fade-in { 
   animation: fadeIn 0.35s ease forwards; 
 }
@@ -69,4 +55,14 @@ input, textarea, select {
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
   margin: 60px auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ 
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

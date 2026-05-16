@@ -156,32 +156,6 @@ export default function PaperDeatil() {
                         </button>
                         {!paperSaved && <span className='notes-hint'>Save the paper first to keep notes</span>}
                     </div>
-
-                    {paper.references?.length > 0 && (
-                        <>
-                            <div className="section-label">References ({paper.references.length})</div>
-                            <div className="references-list">
-                                {paper.references.slice(0, 101).map((ref,i) => (
-                                    <div key={i} className="ref-item">
-                                        <span className="ref-num">{i + 1}</span>
-                                        <span className="ref-text">
-                                            {ref.author && `${ref.author}. `}
-                                            {ref['journal-title'] && <em>{ref['journal-title']}. </em>}
-                                            {ref.year && `${ref.year}. `}
-                                            {ref.DOI && (
-                                                <a href={`https://doi.org/${ref.DOI}`} target="_blank" rel="noreferrer" className='ref-doi'>
-                                                    DOI: {ref.DOI}
-                                                </a>
-                                            )}
-                                        </span>
-                                    </div>
-                                ))}
-                                {paper.references.length > 10 && (
-                                    <div className="ref-more">+ {paper.references.length - 10} more references</div>
-                                )}
-                            </div>
-                        </>
-                    )}
                 </div>
 
                 {/* Sidebar */}
