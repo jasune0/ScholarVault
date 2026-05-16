@@ -95,12 +95,71 @@ export default function HomePage() {
             setPage(pg);
             setHasSearched(true);
         } catch (err) {
-            setError("something went wrong.");
+            setError("something went wrong.", err);
         } finally {
             setLoading(false);
         }
     }, []);
 
+    // runs when user clicks a page number 
+    const pageChange = (newPage) => {
+
+        // current year filter user selected 
+        const year = YEAR_OPTIONS[yearFilter];
+
+        // re-do the search with same query and filter on new page number 
+        doSearch(query, newPage, {
+            type: typeFilter,
+            fromYear: year.from,
+            toYear: year.to,
+            sort: sortBy,
+            openAccess: openAccessOnly,
+        });
+
+        // scroll to top of the page smoothly 
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const renderPagination = () => {
+        // if only page dont show pagination 
+        if (totalPages <= 1) return null;
+        const pages = [];
+        // used to show only 5 page number buttons at a time 
+        const maxVisible = 5;
+
+        // this makes variable start at 2 pages behind, but also ensures it doesnt go below 1 
+        let start = Math.max(1, page - 2);
+
+        // goes four pages ahead of start while maintaining max visible of 5 pages 
+        let end = Math.min(totalPages, start + maxVisible - 1);
+
+        // will end up looking like 3 4 [5] 6 7 
+
+        if (end - start < maxVisible - 1) start = Math.max(1, end - maxVisible + 1);
+
+        // if go to page ahead of one, will always show page button 1
+        // when there is a gap it will add ...
+        if (start > 1) {
+            pages.push(<button key='1' className="page-btn" onClick={() => pageChange(1)}>1</button>);
+            if (start > 2) pages.push(<span key="e1" className='page-ellip'>...</span>);
+        }
+
+        // loop through and render each visible page button, it also highlights the active or current page 
+        for (let i = start; i <= end; i++) {
+            pages.push(
+                <button key={i} className={`page-btn ${i === page ? 'active' : ''}`} onClick={() => pageChange(i)}>{i}</button>
+            );
+        }
+
+        
+        // if not at last page always show the last page button and add ... between last and maxvisible 
+        if (end < totalPages) {
+            if (end < totalPages - 1) pages.push(<span key="e2" className='page-ellip'>...</span>);
+
+            pages.push(<button key={totalPages} className='page-btn' onClick={() => pageChange(totalPages)}>{totalPages}</button>)
+        }
+        return <div className="pagination">{pages}</div>;
+    };
 
     const handleSearch = (e) => {
         // stop refreshing when form submitted 
@@ -117,6 +176,9 @@ export default function HomePage() {
             openAccess: openAccessOnly
         });
     };
+
+
+
 
     return ( 
         <div className="home">
@@ -235,6 +297,7 @@ export default function HomePage() {
                                 {results.map((paper, i) => (
                                     <PaperCard key={paper.doi || i} paper={paper} />
                                 ))}    
+                                {renderPagination()}
                             </>
                         )}
                     </>

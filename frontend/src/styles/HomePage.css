@@ -241,3 +241,44 @@
     color: white;
     border-color: var(--accent);
 }
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.page-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    background: white;
+    transition: all 0.15s;
+    overflow-x: hidden;
+}
+
+.page-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent)
+}
+
+.page-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.page-ellip {
+    display: flex;
+    align-items: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding: 0 4px;
+}
