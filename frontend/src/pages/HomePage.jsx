@@ -196,10 +196,14 @@ export default function HomePage() {
             )}
 
 
-            {/* Search bar */}
+            {/* Search bar 
+                after searching add 'compact' class 
+            */}
             <div className={`search-section ${hasSearched ? 'compact' : ''}`}>
+                {/*  Once form is submitted it calls handle search that stop page refresh and does search */}
                 <form className='search-form' onSubmit={handleSearch}>
                     <div className="search-bar">
+                        {/* Every keystroke triggers setInputVal which updates value with inputVal */}
                         <input 
                             type="text" 
                             value={inputVal}
@@ -216,6 +220,7 @@ export default function HomePage() {
                     <div className="filter-group">
                         <label className="filter-label">Type</label>
                         <div className="chip-group">
+                            {/* Renders in the filter buttons, if one selected adds active class to it, also adds filter once clicked */}
                             {FIELD_FILTERS.map((f, i) => (
                                 <button
                                     key={i}
@@ -232,6 +237,7 @@ export default function HomePage() {
                     <div className="filter-group">
                         <label className="filter-label">Year</label>
                         <div className="chip-group">
+                            {/* Renders in year button, add active class if selecetd and sets year once clicked  */}
                             {YEAR_OPTIONS.map((y, i) => (
                                 <button
                                     key={i}
@@ -249,6 +255,7 @@ export default function HomePage() {
                         <div>
                             <label className='filter-label'>Sort</label>
                             <div className="chip-group">
+                                {/* Renders in sort buttons and does same as previous mappings */}
                                 {SORT_OPTIONS.map((s, i) => (
                                     <button
                                         key={i}
@@ -263,6 +270,7 @@ export default function HomePage() {
                         </div>
 
                         <label className="oa-toggle">
+                            {/* If clicked sets openAccessOnly to true otherwise is false */}
                             <input
                                 type="checkbox"
                                 checked={openAccessOnly}
@@ -276,10 +284,12 @@ export default function HomePage() {
 
             {/* Results */}
             <div className="results-section">
+                {/* shows a spinner which is in global css and error when there is an error */}
                 {loading && <div className='spinner' />}
 
                 {error && <div className='error-box'>{error}</div>}
 
+                {/* Shows results when search completed */}
                 {!loading && hasSearched && !error && (
                     <>
                         <div className="results-header">
@@ -288,6 +298,7 @@ export default function HomePage() {
                             </span>
                         </div>
 
+                        {/* if result has more than one page render them with papercard component else show no results */}
                         {results.length === 0 ? (
                             <div className='no-results'>No results found.</div>
                         ) : (
@@ -304,6 +315,7 @@ export default function HomePage() {
                 {!hasSearched && !loading && (
                     <div className="suggestions">
                         <p className="suggestions-label">Try searching for:</p>
+                        {/* Renders the suggestion buttons and if clicked sets input value to the button clicked and query and does a search */}
                         <div className="suggestion-chips">
                             {['machine learning', 'climate change', 
                               'CRISPR gene editing', 'neural networks', 

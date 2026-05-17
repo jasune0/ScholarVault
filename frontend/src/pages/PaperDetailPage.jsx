@@ -108,6 +108,7 @@ export default function PaperDeatil() {
 
     return (
         <div className="detail-wrap fade-in">
+            {/* goes back one page if clicked */}
             <button className="back-btn" onClick={() => navigate(-1)}>← Back to results</button>
 
             <div className="detail-layout">
