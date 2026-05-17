@@ -114,7 +114,7 @@ All endpoints are prefixed with `/api`
 | Bug | Description | Fix |
 |-----|-------------|-----|
 | Abstract often missing | Many publishers don't share abstract data with CrossRef | Expected behavior — "Open Full Paper" link is the workaround |
-| No user accounts | All papers save to one shared Supabase table — no user separation | Add Supabase Auth |
+| No user accounts | All papers save to one shared Supabase table, no user separation | Add Supabase Auth |
 
 ### Road-map for Future Development
  - Add Supabase Auth so each user has own library.
