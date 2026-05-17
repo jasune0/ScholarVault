@@ -271,7 +271,7 @@ app.delete('/api/saved/:doi', async (req, res) => {
   try {
 
     // reads doi from url and decodes it 
-    const doi = decodeURIComponent(req.params.doi);
+    const doi = decodeURIComponent(decodeURIComponent(req.params.doi));
 
     // delete row where doi matches
     const { error } = await supabase
@@ -295,7 +295,7 @@ app.put('/api/saved/:doi/notes', async (req, res) => {
   try {
 
     // get doi from url 
-    const doi = decodeURIComponent(req.params.doi);
+    const doi = decodeURIComponent(decodeURIComponent(req.params.doi));
 
     // get notes from request body
     const { notes } = req.body;
