@@ -9,6 +9,7 @@ export default function Saved() {
     const navigate = useNavigate();
     const [search, setSearch] = useState('');
     
+    // runs everytime when search state changes 
     const filtered = saved.filter(p => 
         p.title.toLowerCase().includes(search.toLowerCase()) ||
         p.authors?.toLowerCase().includes(search.toLowerCase()) || 
