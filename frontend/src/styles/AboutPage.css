@@ -19,7 +19,7 @@
 }
 
 .page-eyebrow {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -130,7 +130,7 @@
 }
 
 .tech-label {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.1em;

@@ -9,7 +9,7 @@
 }
 
 .page-eyebrow {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -31,7 +31,7 @@
 }
 
 .toc-label {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -79,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 20px;
     font-weight: 500;
     flex-shrink: 0;

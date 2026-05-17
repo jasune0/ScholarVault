@@ -9,7 +9,7 @@
     border: none;
     color: var(--muted);
     font-size: 13px;
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     margin-bottom: 24px;
     padding: 0;
     transition: color 0.15s;
@@ -40,7 +40,7 @@
     gap: 6px;
     font-size: 13px;
     color: var(--muted);
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     margin-bottom: 24px;
     line-height: 1.3;
 }
@@ -56,7 +56,7 @@
 }
 
 .tag {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 11px;
     padding: 3px 10px;
     border-radius: 100px;
@@ -75,7 +75,7 @@
 }
 
 .section-label {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -165,7 +165,7 @@
 }
 
 .sidebar-card h4 {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -191,12 +191,12 @@
 }
 
 .stat-row strong {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 12px;
 }
 
 .doi-link {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 11px;
     color: var(--accent2);
     word-break: break-all;

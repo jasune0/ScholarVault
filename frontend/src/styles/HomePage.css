@@ -13,7 +13,7 @@
 }
 
 .hero-eyebrow {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -117,7 +117,7 @@
 }
 
 .filter-label {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -183,7 +183,7 @@
 .results-count { 
     font-size: 13px;
     color: var(--muted);
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
 }
 
 
@@ -213,7 +213,7 @@
 }
 
 .suggestions-label {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -258,7 +258,7 @@
     height: 36px;
     border: 1px solid var(--border);
     border-radius: 8px;
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-secondary);
     font-size: 13px;
     color: var(--muted);
     background: white;

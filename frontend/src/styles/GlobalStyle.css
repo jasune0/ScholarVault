@@ -5,17 +5,19 @@
 }
  
 :root {
-  --ink: #0e0e12;
+  --ink: black;
   --paper: #f5f2ec;
-  --cream: #ede9e0;
-  --accent: #c8522a;
-  --accent2: #2a6eb5;
+  --cream: #FFFDD0;
+  --accent: red;
+  --accent2: blue;
   --muted: #7a7570;
   --border: #d4cfc6;
   --card: #ffffff;
   --tag-bg: #e8e3d8;
-  --success: #1a6b35;
+  --success: green;
   --success-bg: #d4edda;
+  --font-main: 'Outfit', sans-serif;
+  --font-secondary: 'DM Mono', monospace;
 }
  
 html { 
@@ -23,7 +25,7 @@ html {
 }
  
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-main);
   background: var(--paper);
   color: var(--ink);
   min-height: 100vh;
@@ -36,11 +38,11 @@ a {
  
 button { 
   cursor: pointer; 
-  font-family: 'Outfit', sans-serif; 
+  font-family: var(--font-main); 
 }
  
 input, textarea, select {
-  font-family: 'Outfit', sans-serif;
+  font-family:  var(--font-main); 
 }
  
   
