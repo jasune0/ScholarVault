@@ -7,6 +7,14 @@
       "dest": "backend/server.js"
     },
     {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|svg|ico|json))",
+      "dest": "/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
