@@ -104,7 +104,7 @@ app.get('/api/search', async (req, res) => {
       openAccess,
     } = req.query;
 
-    // if no search term provided sends back a 400 error, which is a bad request 
+    // if no search term provided sends back a 400 error, a bad request 
     // stops function from continuing 
     if (!q.trim()) {
       return res.status(400).json({ error: 'Query param q is required' });
