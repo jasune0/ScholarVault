@@ -2,6 +2,11 @@
 // import use effect for page loads and use state to store data 
 import { useEffect, useState } from 'react';
 
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJs, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+
+ChartJs.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
+
 // import use params to read DOI from URL, use naviagte allows user to go back previous page
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -136,6 +141,50 @@ export default function PaperDeatil() {
                             </div>
                         </>
                     )}
+
+                    {paper.citations > 0 && (
+                        <>
+                            <div className="section-label">Citation Impact</div>
+                                <Bar 
+                                    data={{ 
+                                        labels: ["This Paper", "High Impact (1000+)", "Average (100+)", "Low (10)+"],
+                                        datasets: [{
+                                            label: 'Citations',
+                                            data: [paper.citations, 1000, 100, 10],
+                                            backgroundColor: [
+                                                '#c8522a',
+                                                '#e8e3d8',
+                                                '#e8e3d8',
+                                                '#e8e3d8',
+                                            ],
+                                            borderRadius: 6,
+                                        }]
+                                    }}
+                                    options={{
+                                        responsive: true,
+                                        plugins: {
+                                            legend: { display: false },
+                                            title: {
+                                                display: true,
+                                                text: `${paper.citations.toLocaleString()} total citations`,
+                                                font: { size: 13},
+                                                color: '#7a7570'
+                                            }
+                                        },
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true,
+                                                ticks: {
+                                                    font: { family: 'DM Mono'}
+                                                }
+                                            }
+                                        }
+                                    }}
+                                
+                                />
+                        </>
+                    )}
+
 
                     <div className="section-label">Your Notes</div>
                     <textarea 

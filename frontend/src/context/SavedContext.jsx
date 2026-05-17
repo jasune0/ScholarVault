@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import { toast } from 'react-toastify';
 
 
 // Creates an empty box which will be filled with data and functions, shared across whole app
@@ -51,6 +52,8 @@ export function SavedProvider({ children }) {
             return [...prev, { ...paper, notes: '', savedAt: new Date().toISOString() }];
         });
 
+        toast.success('Paper saved to library!');
+
         try {
             // Sends paper to POST route
             const res = await fetch('/api/saved' , {
@@ -74,6 +77,7 @@ export function SavedProvider({ children }) {
     const removePaper = async (doi) => {
         // remove from UI immediately, filter keeps every paper whose doi doesnt match 
         setSaved(prev => prev.filter(p => p.doi !== doi));
+        toast.error('Paper removed from library');
 
         try {
             // call DELETE route 
