@@ -62,7 +62,7 @@ export default function Saved() {
 
                                     <h3 className="saved-card-title">{paper.title}</h3>
                                     <div className="saved-card-meta">
-                                        {paper.authorss && <span>{paper.authors.split(',').slice(0, 2).join(',')}{paper.authors.split(',').length > 2 ? ' et al.' : ''}</span>}
+                                        {paper.authors && <span>{paper.authors.split(',').slice(0, 2).join(',')}{paper.authors.split(',').length > 2 ? ' et al.' : ''}</span>}
                                         {paper.journal && <span>· {paper.journal}</span>}
                                         {paper.year && <span>· {paper.year}</span>}
                                     </div>
