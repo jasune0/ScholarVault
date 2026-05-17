@@ -6,18 +6,6 @@
     overflow: hidden;
 }
 
-.about-hero::before {
-    content: '"';
-    position: absolute;
-    right: 40px;
-    top: -40px;
-    font-family: var(--font-third);
-    font-size: 280px;
-    color: rgba(255, 255, 255, 0.03);
-    line-height: 1;
-    pointer-events: none;
-}
-
 .page-eyebrow {
     font-family: var(--font-secondary);
     font-size: 11px;
