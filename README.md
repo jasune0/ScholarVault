@@ -38,7 +38,6 @@ Make sure to have the following installed:
  - npm 
  - A [supabase](https://supabase.com) account with a project set up
 
-## a.
 ### 1. Clone the Repo
 
 ```bash 
@@ -97,6 +96,25 @@ node npm run dev
 ```
 
 
-## d. API Documentation
+## API Documentation
 All endpoints are prefixed with `/api`
 
+| Method | Route | Description |
+|--------|-------|-------------|
+| `GET` | `/api/health` | Checks backend is running and Supabase is connected |
+| `GET` | `/api/search?q=...` | Searches CrossRef API with optional filters and pagination |
+| `GET` | `/api/paper/*` | Fetches full metadata for one paper by DOI |
+| `GET` | `/api/saved` | Returns all saved papers from Supabase |
+| `POST` | `/api/saved` | Saves a paper to Supabase |
+| `DELETE` | `/api/saved/:doi` | Removes a saved paper from Supabase by DOI |
+| `PUT` | `/api/saved/:doi/notes` | Updates the notes field for a saved paper |
+
+
+## Known bugs and Road-map for Future Development
+| Bug | Description | Fix |
+|-----|-------------|-----|
+| Abstract often missing | Many publishers don't share abstract data with CrossRef | Expected behavior — "Open Full Paper" link is the workaround |
+| No user accounts | All papers save to one shared Supabase table — no user separation | Add Supabase Auth |
+
+### Road-map for Future Development
+ - Add Supabase Auth so each user has own library.
