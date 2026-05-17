@@ -18,7 +18,7 @@
 }
 
 .page-title {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-third);
     font-size: 34px;
     color: var(--ink);
     margin-bottom: 8px;
@@ -86,7 +86,7 @@
 }
 
 .step-body h3 {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-third);
     font-size: 18px;
     color: var(--ink);
     margin-bottom: 8px;

@@ -11,7 +11,7 @@
     position: absolute;
     right: 40px;
     top: -40px;
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-third);
     font-size: 280px;
     color: rgba(255, 255, 255, 0.03);
     line-height: 1;
@@ -28,7 +28,7 @@
 }
 
 .about-hero h1 {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-third);
     font-size: clamp(28px, 4vw, 44px);
     line-height: 1.1;
     max-width: 640px;
@@ -78,7 +78,7 @@
 .icon-green { background: #d8f5e4; }
 
 .feature-card h3 {
-    font-display: 'DM Serif Display', serif;
+    font-display: var(--font-third);
     font-size: 18px;
     color: var(--ink);
     margin-bottom: 8px;
@@ -96,7 +96,7 @@
 }
 
 .stakeholders h2, .tech-section h2 {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-third);
     font-size: 26px;
     color: var(--ink);
     margin-bottom: 20px;
@@ -139,7 +139,7 @@
 }
 
 .tech-name {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-third);
     font-size: 22px;
     color: var(--ink);
     margin-bottom: 10px;

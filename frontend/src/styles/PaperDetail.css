@@ -27,7 +27,7 @@
 }
 
 .detail-title {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-third);
     font-size: 28px;
     line-height: 1.2;
     color: var(--ink);
