@@ -176,9 +176,7 @@ export default function HomePage() {
             openAccess: openAccessOnly
         });
     };
-
-
-
+    
 
     return ( 
         <div className="home">

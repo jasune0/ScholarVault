@@ -12,19 +12,19 @@ export default function About() {
             <div className="about-content">
                 <div className="features-grid">
                     <div className="feature-card">
-                        <div className="feature-icon icon-red">🔍</div>
+                        <div className="feature-icon icon-red"><span class="material-symbols-outlined">search</span></div>
                         <h3>Unified Search</h3>
                         <p>One search bar queries 150M+ works through the CrossRef API.</p>
                     </div>
 
                     <div className="feature-card">
-                        <div className="feature-icon icon-blue">✅</div>
+                        <div className="feature-icon icon-blue"><span class="material-symbols-outlined">check</span></div>
                         <h3>Credibility Signals</h3>
                         <p>Every result shows peer-review status, citation count, open access availability, and publisher info upfront.</p>
                     </div>
 
                     <div className="feature-card">
-                        <div className="feature-icon icon-green">🔖</div>
+                        <div className="feature-icon icon-green"><span class="material-symbols-outlined">shelves</span></div>
                         <h3>Personal Library</h3>
                          <p>Save papers, attach personal notes, and build a reading list, all stored in a database.</p>
                     </div>

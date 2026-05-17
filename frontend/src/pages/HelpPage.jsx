@@ -11,21 +11,26 @@ const STEPS = [
 
 export default function Help() {
     return (
+        // wraps whole page, this allows fade-in css animation from global styles
         <div className="help-wrap fade-in">
+            {/* Container for header section */}
             <div className="help-header">
                 <div className="page-eyebrow">Documentation</div>
                 <h1 className="page-title">How to Use ScholarVault</h1>
                 <p className="help-sub">Everything you need to get the most out of your research</p>
             </div>
 
+            {/* Container for table of contents */}
             <div className="help-layout">
                 <aside className="help-toc">
                     <div className="toc-label">On This Page</div>
                     <a href="#getting-started" className="toc-link">Getting Started</a>
                 </aside>
 
+                {/* Container which is used to make grid */}
                 <div className="help-content">
                     <div id="getting-started">
+                        {/* map each step onto the site */}
                         {STEPS.map(step => (
                             <div key={step.num} className="help-step">
                                 <div className="step-num">{step.num}</div>

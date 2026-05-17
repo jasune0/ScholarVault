@@ -27,7 +27,7 @@ export default function Saved() {
 
             {saved.length === 0 ? (
                 <div className="empty-state">
-                    <div className="empty-icon">📚</div>
+                    <div className="empty-icon"><span class="material-symbols-outlined">library_books</span></div>
                     <h2>Your library is empty</h2>
                     <p>Search for papers and click "+ Save" to add them.</p>
                     <button className="go-search-btn" onClick={() => navigate('/')}>Start Searching</button>

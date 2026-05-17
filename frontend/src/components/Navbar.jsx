@@ -15,7 +15,7 @@ export default function Navbar() {
     return (
         <header className='navbar'>
             <Link to="/" className='navbar-logo'>
-                <div className='logo-icon'>📚</div>
+                <div className='logo-icon'><span class="material-symbols-outlined">book_ribbon</span></div>
                 <span>ScholarVault</span>
             </Link>
 

@@ -197,7 +197,7 @@ export default function PaperDeatil() {
                             style={{ marignTop: 8 }}
                             onClick={() => navigator.clipboard.writeText(`${paper.authors} (${paper.year}). ${paper.title}. ${paper.journal}. https://doi.org/${paper.doi}`)}
                         >
-                            Copy Citation
+                            <span class="material-symbols-outlined">content_copy</span>Copy Citation
                         </button>
                     </div>
                 </div>
