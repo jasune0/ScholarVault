@@ -1,4 +1,17 @@
 .paper-card {
     background: var(--card);
-    
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+.paper-card:hover {
+    border-color: grey;
 }
