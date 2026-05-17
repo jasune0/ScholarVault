@@ -84,7 +84,7 @@ export default function HomePage() {
             });
 
             // call backend 
-            const res = await fetch(`https://scholar-vault-five.vercel.app/api/search?${params}`)
+            const res = await fetch(`/api/search?${params}`)
             if(!res.ok) throw new Error("Search failed")
             const data = await res.json();
 
