@@ -58,9 +58,45 @@ cd ../frontend
 npm install
 ```
 
-### 4. Setup Environment Variables 
+### 4. Set up Supabase Database
+Create table called 'saved_papers' with following columns:
+
+| Column | Type |
+|---|---|
+| id | int8 (primary key, auto increment) |
+| doi | text |
+| title | text |
+| authors | text |
+| journal | text |
+| year | int4 |
+| citations | int4 |
+| type | text |
+| open_access | bool |
+| notes | text |
+| saved_at | timestamptz (default: now()) |
+
+
+### 5. Setup Environment Variables 
 ```
 SUPABASE_URL=your_supabase_url
 SUPABASE_KEY=your_supabase_key
 ```
+
+### 6. Run both frontend and backend 
+
+``` bash
+cd backend 
+node server.js
+```
+
+In new terminal:
+
+```bash
+cd frontend 
+node npm run dev
+```
+
+
+## d. API Documentation
+All endpoints are prefixed with `/api`
 

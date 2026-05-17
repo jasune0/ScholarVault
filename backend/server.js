@@ -318,7 +318,7 @@ app.put('/api/saved/:doi/notes', async (req, res) => {
 
 
 // check api health 
-app.get('api/health', async (req, res) => {
+app.get('/api/health', async (req, res) => {
   const { error } = await supabase.from('saved_papers').select('id').limit(1);
   res.json({
     status: 'ok',
