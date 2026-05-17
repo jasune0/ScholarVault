@@ -2,9 +2,12 @@
 // import use effect for page loads and use state to store data 
 import { useEffect, useState } from 'react';
 
+// import bar chart component from react wrapper
 import { Bar } from 'react-chartjs-2';
+// import pieces to manually register 
 import { Chart as ChartJs, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
+// activate all the pieces so chart can render 
 ChartJs.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 // import use params to read DOI from URL, use naviagte allows user to go back previous page
@@ -142,14 +145,17 @@ export default function PaperDeatil() {
                         </>
                     )}
 
+                    {/* if paper has citations render chart */}
                     {paper.citations > 0 && (
                         <>
                             <div className="section-label">Citation Impact</div>
                                 <Bar 
                                     data={{ 
+                                        // label for the x axis 
                                         labels: ["This Paper", "High Impact (1000+)", "Average (100+)", "Low (10)+"],
                                         datasets: [{
                                             label: 'Citations',
+                                            // height of real bar and the rest are fixed numbers 
                                             data: [paper.citations, 1000, 100, 10],
                                             backgroundColor: [
                                                 '#c8522a',
@@ -160,10 +166,12 @@ export default function PaperDeatil() {
                                             borderRadius: 6,
                                         }]
                                     }}
+                                    // how it behaves
                                     options={{
                                         responsive: true,
                                         plugins: {
                                             legend: { display: false },
+                                            // shows the citation count as a title 
                                             title: {
                                                 display: true,
                                                 text: `${paper.citations.toLocaleString()} total citations`,
@@ -171,6 +179,7 @@ export default function PaperDeatil() {
                                                 color: '#7a7570'
                                             }
                                         },
+                                        // makes y start at 0 
                                         scales: {
                                             y: {
                                                 beginAtZero: true,

@@ -52,6 +52,8 @@ export function SavedProvider({ children }) {
             return [...prev, { ...paper, notes: '', savedAt: new Date().toISOString() }];
         });
 
+        // adds a toast pop up when paper is added, this is an optimistic render
+        // as it comes before actually saving paper 
         toast.success('Paper saved to library!');
 
         try {
@@ -77,6 +79,8 @@ export function SavedProvider({ children }) {
     const removePaper = async (doi) => {
         // remove from UI immediately, filter keeps every paper whose doi doesnt match 
         setSaved(prev => prev.filter(p => p.doi !== doi));
+
+        // toast pop up when removed paper 
         toast.error('Paper removed from library');
 
         try {
