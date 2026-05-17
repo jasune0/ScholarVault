@@ -77,7 +77,7 @@ export function SavedProvider({ children }) {
 
         try {
             // call DELETE route 
-            const res = await fetch(`/api/saved${encodeURIComponent(encodeURIComponent(doi))}`, {
+            const res = await fetch(`/api/saved/${encodeURIComponent(encodeURIComponent(doi))}`, {
                 method: 'DELETE',
             });
 
@@ -95,7 +95,7 @@ export function SavedProvider({ children }) {
 
         try {
             // call PUT route for notes, this updates just the notes 
-            const res = await fetch(`/api/saved${encodeURIComponent(encodeURIComponent(doi))}/notes`, {
+            const res = await fetch(`/api/saved/${encodeURIComponent(encodeURIComponent(doi))}/notes`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ notes }),
