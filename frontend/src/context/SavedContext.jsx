@@ -16,7 +16,7 @@ export function SavedProvider({ children }) {
         const fetchSaved = async () => {
             try {
                 // call GET route if fails throws an error
-                const res = await fetch('/api/saved');
+                const res = await fetch('https://scholar-vault-five.vercel.app/api/saved');
                 if (!res.ok) throw new Error('Failed to fetch');
                 // convert response to json
                 const data = await res.json();
@@ -53,7 +53,7 @@ export function SavedProvider({ children }) {
 
         try {
             // Sends paper to POST route
-            const res = await fetch('/api/saved' , {
+            const res = await fetch('https://scholar-vault-five.vercel.app/api/saved' , {
                 method: 'POST',
                 // Tells express body is json
                 headers: { 'Content-Type': 'application/json' },
@@ -77,7 +77,7 @@ export function SavedProvider({ children }) {
 
         try {
             // call DELETE route 
-            const res = await fetch(`/api/saved/${encodeURIComponent(doi)}`, {
+            const res = await fetch(`https://scholar-vault-five.vercel.app/api/saved${encodeURIComponent(doi)}`, {
                 method: 'DELETE',
             });
 
@@ -95,7 +95,7 @@ export function SavedProvider({ children }) {
 
         try {
             // call PUT route for notes, this updates just the notes 
-            const res = await fetch(`/api/saved/${encodeURIComponent(doi)}/notes`, {
+            const res = await fetch(`https://scholar-vault-five.vercel.app/api/saved${encodeURIComponent(doi)}/notes`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ notes }),

@@ -48,7 +48,7 @@ export default function PaperDeatil() {
         const fetchPaper = async () => {
             try {
                 // calls my backend with the DOI
-                const res = await fetch(`/api/paper/${decodedDoi}`);
+                const res = await fetch(`https://scholar-vault-five.vercel.app/api/paper/${decodedDoi}`);
 
                 // if response is not a 200 status will throw an error
                 if (!res.ok) throw new Error('Not found');
